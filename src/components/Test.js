@@ -16,9 +16,15 @@ const Test = (props) => {
   return (
     <div onClick={() => console.log(canvas1000x1000length)} id="canvas">
       {Canvas1000x1000?.map((x) => (
-        <div>a</div>
+        <div>aa</div>
       ))}
     </div>
+
+    // <div onClick={() => console.log(canvas1000x1000length)} id="canvas">
+    //   {Canvas1000x1000?.map((x) => (
+    //     <div>a</div>
+    //   ))}
+    // </div>
   );
 };
 
