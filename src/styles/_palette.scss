@@ -1,0 +1,29 @@
+@import "./config";
+
+#palette {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: $background-50;
+  width: 90vh;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+  display: flex;
+  justify-content: center;
+  //   box-shadow: $boxshadow;
+}
+
+.colorInPalette {
+  width: 2rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.colorInPalette:active {
+  border: red;
+}

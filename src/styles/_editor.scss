@@ -1,0 +1,49 @@
+#editor {
+  //   border: 1px solid $color-text-first;
+  //   border-radius: 0.25rem;
+  //   padding: 1rem 4rem 2rem 4rem;
+  //   margin-top: 2rem;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //   h1 {
+  //     margin-bottom: 1.5rem;
+  //   }
+
+  //   h2 {
+  //     margin-bottom: 1rem;
+  //   }
+  //   .panelInput {
+  //     height: 5rem;
+  //     width: 5rem;
+  //     font-size: 2rem;
+  //     text-align: center;
+  //     background-color: $background-100;
+  //     color: $color-0;
+  //     border: 1px solid $color-text-third;
+  //     border-radius: 0.25rem;
+  //     margin: 0 1rem 0.5rem 1rem;
+  //     padding-left: 1rem;
+
+  //     &:focus {
+  //       outline: none !important;
+  //       border-color: $color-text-mid;
+  //       box-shadow: $boxshadow;
+  //     }
+  //   }
+}
+
+#options {
+  display: flex;
+  //   margin-bottom: 3rem;
+  justify-content: center;
+}
+
+#reactColor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
