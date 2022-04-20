@@ -5,8 +5,8 @@ import Palette from "./Palette";
 import { MapInteractionCSS } from "react-map-interaction";
 
 export default function Editor() {
-  const [panelWidth, setPanelWidth] = useState(100);
-  const [panelHeight, setPanelHeight] = useState(100);
+  const [panelWidth, setPanelWidth] = useState(1000);
+  const [panelHeight, setPanelHeight] = useState(1000);
   const [hideOptions, setHideOptions] = useState(false);
   const [hideDrawingPanel, setHideDrawingPanel] = useState(true);
   const [buttonText, setButtonText] = useState("start drawing");
