@@ -3,10 +3,11 @@ import { GithubPicker } from "react-color";
 import DrawingPanel from "./DrawingPanel";
 import Palette from "./Palette";
 import { MapInteractionCSS } from "react-map-interaction";
+import Test from "./Test";
 
 export default function Editor() {
-  const [panelWidth, setPanelWidth] = useState(1000);
-  const [panelHeight, setPanelHeight] = useState(1000);
+  const [panelWidth, setPanelWidth] = useState(100);
+  const [panelHeight, setPanelHeight] = useState(100);
   const [hideOptions, setHideOptions] = useState(false);
   const [hideDrawingPanel, setHideDrawingPanel] = useState(true);
   const [buttonText, setButtonText] = useState("start drawing");
@@ -60,7 +61,12 @@ export default function Editor() {
         onChangeComplete={changeColor}
       /> */}
       <MapInteractionCSS>
-        <DrawingPanel
+        {/* <DrawingPanel
+          panelWidth={panelWidth}
+          panelHeight={panelHeight}
+          selectedColor={selectedColor}
+        /> */}
+        <Test
           panelWidth={panelWidth}
           panelHeight={panelHeight}
           selectedColor={selectedColor}
