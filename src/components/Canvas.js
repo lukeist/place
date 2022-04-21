@@ -1,24 +1,34 @@
 // import Canvas1000x1000 from "../data/Canvas1000x1000";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import Canvas100x100 from "../data/Canvas100x100";
 import Canvas500x500 from "../data/Canvas500x500";
 
 const Canvas = (props) => {
-  const { panelWidth, panelHeight, selectedColor } = props;
-  const testArr = [
-    // "#fff",
-  ];
-
+  const selectedColor = useSelector((state) => state.ultilities.selectedColor);
+  // const [hoveredColor, setHoveredColor] = useState(selectedColor);
+  const [currentColor, setCurrentColor] = useState("#ffffff");
+  const handlerHoveredColor = () => {
+    setCurrentColor(selectedColor);
+  };
+  // const resetColor = () => {
+  //   setCurrentColor;
+  // };
   //   const test1m = new Array(1000000);
   const c100x100length = Canvas100x100.length;
   const c500x500length = Canvas500x500.length;
   // const canvas1000x1000length = Canvas1000x1000.length;
 
   return (
-    <div onClick={() => console.log(c500x500length)} id="canvas">
-      {Canvas500x500?.map((color) => (
+    <div id="canvas">
+      {Canvas500x500.map((color) => (
         <div
-          onClick={() => console.log(color)}
-          style={{ backgroundColor: color }}
+          onClick={() => console.log(currentColor)}
+          style={{ backgroundColor: currentColor }}
+          // className="color-pixel"
+          // onMouseOver={(this.style.color = "#0F0")}
+          onMouseEnter={handlerHoveredColor}
+          onMouseLeave={() => setCurrentColor(color)}
         ></div>
       ))}
     </div>

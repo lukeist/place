@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import setColorReducer from "./setColorReducer";
+import selectedColorReducer from "./selectedColorReducer";
 
 const utilitiesReducer = combineReducers({
-  activeColor: setColorReducer,
+  selectedColor: selectedColorReducer,
 });
 
 export default utilitiesReducer;
