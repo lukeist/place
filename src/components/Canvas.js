@@ -2,7 +2,7 @@
 import Canvas100x100 from "../data/Canvas100x100";
 import Canvas500x500 from "../data/Canvas500x500";
 
-const Test = (props) => {
+const Canvas = (props) => {
   const { panelWidth, panelHeight, selectedColor } = props;
   const testArr = [
     // "#fff",
@@ -15,8 +15,11 @@ const Test = (props) => {
 
   return (
     <div onClick={() => console.log(c500x500length)} id="canvas">
-      {Canvas500x500?.map((x) => (
-        <div>aa</div>
+      {Canvas500x500?.map((color) => (
+        <div
+          onClick={() => console.log(color)}
+          style={{ backgroundColor: color }}
+        ></div>
       ))}
     </div>
 
@@ -28,4 +31,4 @@ const Test = (props) => {
   );
 };
 
-export default Test;
+export default Canvas;

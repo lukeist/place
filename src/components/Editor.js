@@ -3,7 +3,7 @@ import { GithubPicker } from "react-color";
 import DrawingPanel from "./DrawingPanel";
 import Palette from "./Palette";
 import { MapInteractionCSS } from "react-map-interaction";
-import Test from "./Test";
+import Canvas from "./Canvas";
 
 export default function Editor() {
   const [panelWidth, setPanelWidth] = useState(100);
@@ -66,7 +66,7 @@ export default function Editor() {
           panelHeight={panelHeight}
           selectedColor={selectedColor}
         /> */}
-        <Test
+        <Canvas
           panelWidth={panelWidth}
           panelHeight={panelHeight}
           selectedColor={selectedColor}
