@@ -1,11 +1,10 @@
 #canvas {
   display: grid;
-  grid-template-columns: repeat(500, 1rem);
-  grid-template-rows: repeat(500, 1rem);
+  grid-template-columns: repeat(10, 1rem);
+  grid-template-rows: repeat(10, 1rem);
   // background-color: white;
   // color: red;
 
-  .color-pixel:hover {
-    // color
+  .color-pixel {
   }
 }
