@@ -66,11 +66,7 @@ export default function Editor() {
           panelHeight={panelHeight}
           selectedColor={selectedColor}
         /> */}
-        <Canvas
-          panelWidth={panelWidth}
-          panelHeight={panelHeight}
-          selectedColor={selectedColor}
-        />
+        <Canvas />
       </MapInteractionCSS>
     </div>
   );

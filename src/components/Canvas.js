@@ -20,12 +20,8 @@ const Canvas = (props) => {
   //   const test1m = new Array(1000000);
   const c100x100length = Canvas100x100.length;
   const c500x500length = Canvas500x500.length;
-  // const canvas1000x1000length = Canvas1000x1000.length;
+  const [currentCanvas, setCurrentCanvas] = useState(Canvas500x500);
 
-  const canvas100 = [];
-  for (let i = 1001; i < 9001; i = i + 50) {
-    canvas100.push("#f0" + i);
-  }
   return (
     // <div id="canvas">
     //   {canvas100.map((pixelColor) => (
@@ -50,8 +46,14 @@ const Canvas = (props) => {
     // </div>
 
     <div id="canvas">
-      {canvas100.map((pixelColor) => (
-        <Pixel canvas100={canvas100} pixelColor={pixelColor} />
+      {currentCanvas.map((pixelColor, index) => (
+        <Pixel
+          setCurrentCanvas={setCurrentCanvas}
+          Canvas500x500={Canvas500x500}
+          pixelColor={pixelColor}
+          index={index}
+          key={index}
+        />
       ))}
     </div>
   );

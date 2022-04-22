@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 export default function Pixel(props) {
-  const { pixelColor, canvas100 } = props;
+  const { index, pixelColor, setCurrentCanvas, Canvas500x500 } = props;
   // const { selectedColor } = props;
   // const [pixelColor, setPixelColor] = useState("#fff");
   // const [oldColor, setOldColor] = useState(pixelColor);
@@ -28,18 +28,24 @@ export default function Pixel(props) {
   const selectedColor = useSelector((state) => state.ultilities.selectedColor);
   // const [hoveredColor, setHoveredColor] = useState(selectedColor);
   const [currentColor, setCurrentColor] = useState(pixelColor);
-  const handlerHoveredColor = () => {
+
+  const handlerHoverOverPixel = () => {
     setCurrentColor(selectedColor);
-    console.log(selectedColor);
+  };
+
+  const handlerApplyColorToPixel = () => {
+    Canvas500x500[index] = selectedColor;
+    const newCanvas = [...Canvas500x500];
+    setCurrentCanvas(newCanvas);
   };
   return (
     <div
-      onClick={() => console.log(currentColor)}
+      onClick={handlerApplyColorToPixel}
       style={{ backgroundColor: currentColor }}
       className="color-pixel"
       // onMouseOver={(this.style.color = "#0F0")}
       onMouseEnter={
-        handlerHoveredColor
+        handlerHoverOverPixel
         // () => console.log(pixelColor)
       }
       onMouseLeave={() => setCurrentColor(pixelColor)}

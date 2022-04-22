@@ -10,11 +10,12 @@ const Palette = () => {
   };
   return (
     <section id="palette">
-      {ColorsInPalette.map((color) => (
+      {ColorsInPalette.map((color, index) => (
         <span
           className="colorInPalette"
           onClick={() => handlerSelectedColor(color)}
           style={{ backgroundColor: color }}
+          key={index}
         ></span>
       ))}
     </section>
