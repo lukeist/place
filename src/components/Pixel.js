@@ -36,8 +36,9 @@ export default function Pixel(props) {
   };
 
   const handlerApplyColorToPixel = () => {
-    Canvas10x10[index] = selectedColor;
-    const newCanvas = [...Canvas10x10];
+    // Canvas10x10[index] = selectedColor;
+    // const newCanvas = [...Canvas10x10];
+    const newCanvas = Canvas10x10.splice(index, 1, selectedColor);
     setCurrentCanvas(newCanvas);
     console.log(index, Canvas10x10);
   };

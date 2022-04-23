@@ -20,7 +20,8 @@ const Canvas = (props) => {
   //   const test1m = new Array(1000000);
   const c100x100length = Canvas100x100.length;
   const c500x500length = Canvas500x500.length;
-  const [currentCanvas, setCurrentCanvas] = useState(Canvas500x500);
+  // const [currentCanvas, setCurrentCanvas] = useState(Canvas500x500);
+  const [currentCanvas, setCurrentCanvas] = useState(Canvas10x10);
 
   return (
     // <div id="canvas">
