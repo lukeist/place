@@ -47,9 +47,16 @@ const Canvas = (props) => {
 
     <div id="canvas">
       {currentCanvas.map((pixelColor, index) => (
+        // <Pixel
+        //   setCurrentCanvas={setCurrentCanvas}
+        //   Canvas500x500={Canvas500x500}
+        //   pixelColor={pixelColor}
+        //   index={index}
+        //   key={index}
+        // />
         <Pixel
           setCurrentCanvas={setCurrentCanvas}
-          Canvas500x500={Canvas500x500}
+          Canvas10x10={Canvas10x10}
           pixelColor={pixelColor}
           index={index}
           key={index}
