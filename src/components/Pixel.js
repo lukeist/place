@@ -2,8 +2,14 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 export default function Pixel(props) {
-  const { index, pixelColor, setCurrentCanvas, Canvas10x10, Canvas500x500 } =
-    props;
+  const {
+    index,
+    pixelColor,
+    setCurrentCanvas,
+    Canvas200x100,
+    Canvas500x500,
+    Canvas10x10,
+  } = props;
   // const { selectedColor } = props;
   // const [pixelColor, setPixelColor] = useState("#fff");
   // const [oldColor, setOldColor] = useState(pixelColor);
@@ -36,11 +42,11 @@ export default function Pixel(props) {
   };
 
   const handlerApplyColorToPixel = () => {
-    // Canvas10x10[index] = selectedColor;
-    // const newCanvas = [...Canvas10x10];
-    const newCanvas = Canvas10x10.splice(index, 1, selectedColor);
+    // Canvas200x100[index] = selectedColor;
+    Canvas200x100.splice(index, 1, selectedColor);
+    const newCanvas = [...Canvas200x100];
     setCurrentCanvas(newCanvas);
-    console.log(index, Canvas10x10);
+    // console.log(newCanvas);
   };
 
   // const handlerApplyColorToPixel = () => {

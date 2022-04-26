@@ -2,7 +2,9 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import Canvas100x100 from "../data/Canvas100x100";
+
 import Canvas10x10 from "../data/Canvas10x10";
+import Canvas200x100 from "../data/Canvas200x100";
 import Canvas500x500 from "../data/Canvas500x500";
 import Pixel from "./Pixel";
 
@@ -21,7 +23,7 @@ const Canvas = (props) => {
   const c100x100length = Canvas100x100.length;
   const c500x500length = Canvas500x500.length;
   // const [currentCanvas, setCurrentCanvas] = useState(Canvas500x500);
-  const [currentCanvas, setCurrentCanvas] = useState(Canvas10x10);
+  const [currentCanvas, setCurrentCanvas] = useState(Canvas200x100);
 
   return (
     // <div id="canvas">
@@ -57,7 +59,8 @@ const Canvas = (props) => {
         // />
         <Pixel
           setCurrentCanvas={setCurrentCanvas}
-          Canvas10x10={Canvas10x10}
+          // Canvas10x10={Canvas10x10}
+          Canvas200x100={Canvas200x100}
           pixelColor={pixelColor}
           index={index}
           key={index}
